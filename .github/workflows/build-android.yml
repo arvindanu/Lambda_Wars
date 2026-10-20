@@ -38,7 +38,7 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: Check out
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Godot
         uses: ./.github/actions/setup-godot
@@ -59,7 +59,7 @@ jobs:
     continue-on-error: true
     steps:
       - name: Check out
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Godot
         uses: ./.github/actions/setup-godot
@@ -91,7 +91,7 @@ jobs:
       BUILD_RELEASE: ${{ github.event_name != 'pull_request' && (github.event_name != 'workflow_dispatch' || inputs.build_release) }}
     steps:
       - name: Check out
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Godot
         id: godot
